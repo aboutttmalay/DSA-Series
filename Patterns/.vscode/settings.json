@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "ostream": "cpp",
+        "iostream": "cpp"
+    },
+    "terminal.integrated.shellIntegration.decorationsEnabled": "both"
+}
