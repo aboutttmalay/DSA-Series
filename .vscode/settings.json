@@ -40,5 +40,8 @@
         "stdexcept": "cpp",
         "streambuf": "cpp",
         "typeinfo": "cpp"
+    },
+    "github.copilot.enable": {
+        "*": false
     }
 }
