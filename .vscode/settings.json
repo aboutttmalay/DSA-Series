@@ -42,6 +42,16 @@
         "typeinfo": "cpp"
     },
     "github.copilot.enable": {
-        "*": false
+        "*": false,
+        "plaintext": false,
+        "markdown": false,
+        "scminput": false,
+        "python": false,
+        "snippets": false,
+        "json": false,
+        "jsonc": false,
+        "sql": true,
+        "cpp": false,
+        "c": false
     }
 }
