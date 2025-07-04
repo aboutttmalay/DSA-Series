@@ -72,32 +72,66 @@
 // Sort a Vector:
 // Input n numbers into a vector and sort it using sort() from the STL.
 
+// #include <iostream>
+// #include <vector>
+// #include <algorithm>
+// using namespace std;
+
+// void sort_vector(vector<int>& nums) {
+//     sort(nums.begin(), nums.end());
+//     cout << "After sorting the array: ";
+//     for (int val : nums) {
+//         cout << val << " ";
+//     }
+//     cout << endl;
+// }
+
+// void print_vector(const vector<int>& nums) {
+//     cout << "Before sorting the array: ";
+//     for (int val : nums) {
+//         cout << val << " ";
+//     }
+//     cout << endl;
+// }
+
+// int main() {
+//     vector<int> nums {45, 23, 78, 12, 34, 56, 778, 965, 2254, 23};
+
+//     print_vector(nums);     
+//     sort_vector(nums);      
+//     return 0;
+// }
+
+// Insert at Specific Position:
+// Insert an element at a specific position in a vector.\
+
+
+
 #include <iostream>
 #include <vector>
-#include <algorithm>
 using namespace std;
 
-void sort_vector(vector<int>& nums) {
-    sort(nums.begin(), nums.end());
-    cout << "After sorting the array: ";
-    for (int val : nums) {
-        cout << val << " ";
-    }
-    cout << endl;
-}
-
-void print_vector(const vector<int>& nums) {
-    cout << "Before sorting the array: ";
-    for (int val : nums) {
-        cout << val << " ";
-    }
-    cout << endl;
-}
-
 int main() {
-    vector<int> nums {45, 23, 78, 12, 34, 56, 778, 965, 2254, 23};
+    vector<int> vec = {10, 20, 30, 40, 50};
 
-    print_vector(nums);     
-    sort_vector(nums);      
+    int position, value;
+    cout << "Enter the position to insert (0-based index): ";
+    cin >> position;
+    cout << "Enter the value to insert: ";
+    cin >> value;
+
+    if (position < 0 || position > vec.size()) {
+        cout << "Invalid position!" << endl;
+        return 1;
+    }
+
+    vec.insert(vec.begin() + position, value);
+
+    cout << "Vector after insertion: ";
+    for (int val : vec) {
+        cout << val << " ";
+    }
+    cout << endl;
+
     return 0;
 }
