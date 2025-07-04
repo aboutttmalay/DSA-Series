@@ -67,8 +67,6 @@
 //     return 0;
 // }
 
-
-
 // Sort a Vector:
 // Input n numbers into a vector and sort it using sort() from the STL.
 
@@ -97,8 +95,8 @@
 // int main() {
 //     vector<int> nums {45, 23, 78, 12, 34, 56, 778, 965, 2254, 23};
 
-//     print_vector(nums);     
-//     sort_vector(nums);      
+//     print_vector(nums);
+//     sort_vector(nums);
 //     return 0;
 // }
 
@@ -106,32 +104,61 @@
 // Insert an element at a specific position in a vector.\
 
 
+// #include <iostream>
+// #include <vector>
+// using namespace std;
+
+// int main() {
+//     vector<int> vec = {10, 20, 30, 40, 50};
+
+//     int position, value;
+//     cout << "Enter the position to insert (0-based index): ";
+//     cin >> position;
+//     cout << "Enter the value to insert: ";
+//     cin >> value;
+
+//     if (position < 0 || position > vec.size()) {
+//         cout << "Invalid position!" << endl;
+//         return 1;
+//     }
+
+//     vec.insert(vec.begin() + position, value);
+
+//     cout << "Vector after insertion: ";
+//     for (int val : vec) {
+//         cout << val << " ";
+//     }
+//     cout << endl;
+
+//     return 0;
+// }
+
+// Erase Elements:
+// Erase a range of elements from a vector from position i to j.
 
 #include <iostream>
 #include <vector>
 using namespace std;
+int main()
+{
+    vector<int> vec = {45, 56, 23, 78, 56, 34, 38, 67};
+    int i, j;
+    cout << "Enter starting index (i): ";
+    cin >> i;
+    cout << "Enter ending index (j): ";
+    cin >> j;
 
-int main() {
-    vector<int> vec = {10, 20, 30, 40, 50};
-
-    int position, value;
-    cout << "Enter the position to insert (0-based index): ";
-    cin >> position;
-    cout << "Enter the value to insert: ";
-    cin >> value;
-
-    if (position < 0 || position > vec.size()) {
-        cout << "Invalid position!" << endl;
+    if (i < 0 || j > vec.size() || i >= j)
+    {
+        cout << "Invalid range!" << endl;
         return 1;
     }
-
-    vec.insert(vec.begin() + position, value);
-
-    cout << "Vector after insertion: ";
-    for (int val : vec) {
+    vec.erase(vec.begin() + i, vec.begin() + j);
+    cout << "Vector after erasing from index " << i << " to " << j - 1 << ": ";
+    for (int val : vec)
+    {
         cout << val << " ";
     }
     cout << endl;
-
     return 0;
 }
